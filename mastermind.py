@@ -74,4 +74,6 @@ def mastermind(niveau):
         print("Vous avez perdu, c'est dommage... La combinaison était ", ''.join(str(chiffre) for chiffre in combinaison))
 
     if input("Voulez-vous rejouer ? (tapez 'oui' ou 'non')  ").upper() == 'OUI': mastermind(menu())
-    else: print("Au revoir !")
+    if input("Voulez-vous jouer à un autre jeu ? (tapez 'oui' ou 'non')  ").upper() == 'OUI':
+        from minigames import choix_jeu
+        choix_jeu()

@@ -2,7 +2,7 @@ import random
 
 #PENDU
 
-#on génère un mot parmi une liste contenu dans le fichier "mots.txt"
+#on choisit un mot parmi une liste contenu dans le fichier "mots.txt"
 def choix_mot():
     mots = ["AVION",
             "BALAI",
@@ -43,7 +43,7 @@ def affichage(mot, lettres_devinees):
 
 #lance un partie de pendu
 def pendu():
-    print("Dans ce jeu, vous devrez deviner un mot généré aléatoirement. Vous aurez droit à 10 erreurs avant d'avoir perdu. Pensez à écrire toutes vos saisies en lettres minuscules")
+    print("Dans ce jeu, vous devrez deviner un mot généré aléatoirement. Vous aurez droit à 10 erreurs avant d'avoir perdu.")
     mot = choix_mot()
     nb_tentatives = 10
     lettres_devinees = []
@@ -66,4 +66,8 @@ def pendu():
             print("Vous avez gagné ! Le mot à deviner était bien :", mot)
         elif nb_tentatives==0:
             print("Vous avez perdu... Le mot à deviner était : ", mot)
+
     if input("Voulez-vous rejouer ? (tapez 'oui' ou 'non')  ").upper() == 'OUI': pendu()
+    if input("Voulez-vous jouer à un autre jeu ? (tapez 'oui' ou 'non')  ").upper() == 'OUI':
+        from minigames import choix_jeu
+        choix_jeu()

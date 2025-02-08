@@ -89,4 +89,6 @@ def morpion():
             break
         
     if input("Voulez-vous rejouer ? (tapez 'oui' ou 'non')  ").upper() == 'OUI': morpion()
-    else: print("Au revoir !")
+    if input("Voulez-vous jouer à un autre jeu ? (tapez 'oui' ou 'non')  ").upper() == 'OUI': 
+        from minigames import choix_jeu
+        choix_jeu()
